@@ -1,7 +1,7 @@
 <template>
   <!-- Binding Text -->
   <h1>Binding Text</h1>
-  <div>{{greet}} {{name}}</div>
+  <div>{{ greet }} {{ name }}</div>
   <div v-text="channel"></div>
 
   <!-- Binding HTML -->
@@ -26,7 +26,7 @@
     Array Conditional Movie
   </h2>
 
-   <h2
+  <h2
     v-bind:class="{
       promoted: isPromoted,
       new: !isSoldOut,
@@ -36,12 +36,16 @@
     Object Conditional Movie
   </h2>
 
+  <!-- Binding Styles -->
+  <h1>Binding Styles</h1>
+  <h2 v-bind:style="headerStyleObject">Style Object</h2>
+  <div v-bind:style="[baseStyleObject, successStyleObject]">Success Style</div>
+  <div v-bind:style="[baseStyleObject, dangerStyleObject]">Danger Style</div>
 </template>
 
 <script>
-
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
       greet: "Hello",
@@ -52,10 +56,31 @@ export default {
       isDisabled: true,
       status: "success",
       isPromoted: true,
-      isSoldOut: true
-    }
-  }  
-}
+      isSoldOut: true,
+      highlightColor: "orange",
+      headerSize: 50,
+      headerStyleObject: {
+        color: "orange",
+        fontSize: "20px",
+        padding: "20px",
+      },
+      baseStyleObject: {
+        fontSize: "20px",
+        padding: "10px",
+      },
+      successStyleObject: {
+        color: "green",
+        backgroundColor: "lightgreen",
+        border: "1px solid green",
+      },
+      dangerStyleObject: {
+        color: "darkred",
+        backgroundColor: "red",
+        border: "1px solid darkred",
+      },
+    };
+  },
+};
 </script>
 
 <style>
