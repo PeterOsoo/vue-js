@@ -6,6 +6,7 @@
   <div v-html="detail"></div>
 
   <h2 v-bind:id="headingId">Heading</h2>
+  <button v-bind:disabled="isDisabled">Bind</button>
 </template>
 
 <script>
@@ -18,7 +19,8 @@ export default {
       name: "Rateng",
       channel: "Ondiek",
       detail: "<b> blacklist </b>",
-      headingId: "Heading"
+      headingId: "Heading",
+      isDisabled: true
     }
   }  
 }
