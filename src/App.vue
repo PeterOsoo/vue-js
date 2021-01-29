@@ -1,5 +1,6 @@
 <template>
   <div>{{greet}} {{name}}</div>
+  <div v-text="channel"></div>
 </template>
 
 <script>
@@ -9,7 +10,8 @@ export default {
   data() {
     return {
       greet: "Hello",
-      name: "Rateng"
+      name: "Rateng",
+      channel: "Ondiek"
     }
   }  
 }
