@@ -11,7 +11,7 @@
 
   <!-- Binding Attributes -->
   <h1>Binding Attributes</h1>
-  <h2 v-bind:id="headingId">Heading</h2>
+  <h2 :id="headingId">Heading</h2>
   <button v-bind:disabled="isDisabled">Bind</button>
 
   <!-- Binding Classes -->
@@ -19,15 +19,16 @@
   <h2 class="underline">Underline</h2>
   <h2 class="underline" v-bind:class="status">Status</h2>
 
-  <h2 v-bind:class="isPromoted && 'promoted'">Promoted Movie</h2>
-  <h2 v-bind:class="isSoldOut ? 'sold-out' : 'new'">Soldout? Movie</h2>
-  <h2 v-bind:class="['new', 'promoted']">Newly Promoted Movie</h2>
-  <h2 v-bind:class="[isPromoted && 'promoted', isSoldOut ? 'sold-out' : 'new']">
+  <!-- <h2 v-bind:class="isPromoted && 'promoted'">Promoted Movie</h2> -->
+  <h2 :class="isPromoted && 'promoted'">Promoted Movie</h2>
+  <h2 :class="isSoldOut ? 'sold-out' : 'new'">Soldout? Movie</h2>
+  <h2 :class="['new', 'promoted']">Newly Promoted Movie</h2>
+  <h2 :class="[isPromoted && 'promoted', isSoldOut ? 'sold-out' : 'new']">
     Array Conditional Movie
   </h2>
 
   <h2
-    v-bind:class="{
+    :class="{
       promoted: isPromoted,
       new: !isSoldOut,
       'sold-out': isSoldOut,
@@ -38,9 +39,9 @@
 
   <!-- Binding Styles -->
   <h1>Binding Styles</h1>
-  <h2 v-bind:style="headerStyleObject">Style Object</h2>
-  <div v-bind:style="[baseStyleObject, successStyleObject]">Success Style</div>
-  <div v-bind:style="[baseStyleObject, dangerStyleObject]">Danger Style</div>
+  <h2 :style="headerStyleObject">Style Object</h2>
+  <div :style="[baseStyleObject, successStyleObject]">Success Style</div>
+  <div :style="[baseStyleObject, dangerStyleObject]">Danger Style</div>
 </template>
 
 <script>
