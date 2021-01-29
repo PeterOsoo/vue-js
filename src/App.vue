@@ -1,5 +1,5 @@
 <template>
-  <div>Hello Rateng</div>
+  <div>{{greet}} {{name}}</div>
 </template>
 
 <script>
@@ -8,6 +8,7 @@ export default {
   name: 'App',
   data() {
     return {
+      greet: "Hello",
       name: "Rateng"
     }
   }  
@@ -15,5 +16,7 @@ export default {
 </script>
 
 <style>
-
+#app {
+  text-align: center;
+}
 </style>
