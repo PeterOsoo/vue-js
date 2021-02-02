@@ -71,17 +71,24 @@
   <h3 v-for="name in fullNames" :key="name.first">
     {{ name.first }} {{ name.last }}
   </h3>
+
+  <!-- array of arrays  -->
   <div v-for="actor in actors" :key="actor.name">
     <h2 class="actor">{{ actor.name }}</h2>
     <p v-for="movie in actor.movies" :key="movie">{{ movie }}</p>
   </div>
-  <h2 v-for="(value, key, index) in myInfo" :key="value">
+
+  <!-- my info  -->
+  <h3 v-for="(value, key, index) in myInfo" :key="value">
     {{ index }} {{ key }} {{ value }}
-  </h2>
+  </h3>
   <br />
   <template v-for="name in names" :key="name">
     <p>{{ name }}</p>
   </template>
+
+  <!-- conditionally rendering list elements  -->
+  <!-- vue evaluates v-if before v-for -->
   <template v-for="name in names" :key="name">
     <h3 v-if="name === 'Clarks'">Wuod {{ name }}</h3>
   </template>
@@ -94,6 +101,22 @@
   <h2>Add method - {{ add(5, 10, 15) }}</h2>
   <h2>Multiply method - {{ multiply(10) }}</h2>
   <h2>Multiply method - {{ multiply(baseValue) }}</h2>
+
+  <!-- Event Handling -->
+  <h1>Event Handling</h1>
+  <h2>{{ name }}</h2>
+  <div>
+    <button @click="changeName($event), increment(1, $event)">
+      Change name
+    </button>
+  </div>
+  <h2>{{ count }}</h2>
+  <div>
+    <button @click="increment(1, $event)">Increment</button>
+    <button @click="decrement(1)">Decrement</button>
+    <button @click="increment(5)">Increment 5</button>
+    <button @click="decrement(5)">Decrement 5</button>
+  </div>
 </template>
 
 <script>
@@ -131,7 +154,7 @@ export default {
         backgroundColor: "red",
         border: "1px solid darkred",
       },
-      num: 0,
+      num: 10,
       showElement: true,
       names: ["Bruce", "Clarks", "Diana"],
       fullNames: [
@@ -157,14 +180,27 @@ export default {
       },
       baseMultiplier: 5,
       baseValue: 2,
+      count: 0,
     };
   },
   methods: {
     add(a, b, c) {
       return a + b + c;
     },
+    // dont use arrow functions
     multiply(num) {
       return num * this.baseMultiplier;
+    },
+    increment(num, event) {
+      this.count += num;
+      console.log(event);
+    },
+    decrement(num) {
+      this.count -= num;
+    },
+    changeName(event) {
+      this.name = "Jakablack";
+      console.log("Event", event);
     },
   },
 };
