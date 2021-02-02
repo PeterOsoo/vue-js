@@ -273,12 +273,21 @@
   </h2>
 
   <!-- Watchers -->
+  <h1>Watchers</h1>
   <h2>Volume Tracker (0-20)</h2>
   <h3>Current Volume - {{ volume }}</h3>
   <div>
     <button @click="volume += 2">Increase</button>
     <button @click="volume -= 2">Decrease</button>
   </div>
+
+  <h1>Immediate and Deep Watchers</h1>
+  <input type="text" v-model="movie" />
+  <input type="text" v-model.lazy="movieInfo.title" placeholder="Movie title" />
+  <input type="text" v-model.lazy="movieInfo.actor" placeholder="Movie actor" />
+  <button @click="movieList = movieList.concat(['Blacklist'])">
+    Add movie
+  </button>
 </template>
 
 <script>
@@ -379,6 +388,12 @@ export default {
       ],
       country: "",
       volume: 2,
+      movie: "batman",
+      movieInfo: {
+        title: "",
+        actor: "",
+      },
+      movieList: ["Batman", "Superman"],
     };
   },
   methods: {
@@ -445,9 +460,28 @@ export default {
           );
         }
       },
+      immediate: true,
     },
-
-    // deep: true,
+    movie: {
+      handler(newValue) {
+        console.log(`Calling API with movie name = ${newValue}`);
+      },
+      immediate: true,
+    },
+    movieInfo: {
+      handler(newValue) {
+        console.log(
+          `Calling API with movie title = ${newValue.title} and actor = ${newValue.actor}`
+        );
+      },
+      deep: true,
+    },
+    movieList: {
+      handler(newValue) {
+        console.log(`Updated list ${newValue}`);
+      },
+      // deep: true,
+    },
   },
 };
 </script>
