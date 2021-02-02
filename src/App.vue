@@ -63,6 +63,28 @@
 
   <!-- v show is always available in the DOM even if its false  -->
   <h2 v-show="showElement">Using v-show</h2>
+
+  <!-- List Rendering -->
+  <h1>List Rendering</h1>
+  <h3 v-for="(name, index) in names" :key="name">{{ index }} {{ name }}</h3>
+  <h2 class="underline">Full Names</h2>
+  <h3 v-for="name in fullNames" :key="name.first">
+    {{ name.first }} {{ name.last }}
+  </h3>
+  <div v-for="actor in actors" :key="actor.name">
+    <h2 class="actor">{{ actor.name }}</h2>
+    <p v-for="movie in actor.movies" :key="movie">{{ movie }}</p>
+  </div>
+  <h2 v-for="(value, key, index) in myInfo" :key="value">
+    {{ index }} {{ key }} {{ value }}
+  </h2>
+  <br />
+  <template v-for="name in names" :key="name">
+    <p>{{ name }}</p>
+  </template>
+  <template v-for="name in names" :key="name">
+    <h3 v-if="name === 'Clarks'">Wuod {{ name }}</h3>
+  </template>
 </template>
 
 <script>
@@ -101,7 +123,24 @@ export default {
         border: "1px solid darkred",
       },
       num: 0,
-      showElement: false,
+      showElement: true,
+      names: ["Bruce", "Clarks", "Diana"],
+      fullNames: [
+        { first: "Bruce", last: "Wayne" },
+        { first: "Clark", last: "Kent" },
+        { first: "Princess", last: "Diana" },
+        { first: "Rateng", last: "Japap" },
+      ],
+      actors: [
+        {
+          name: "Reymond Reddington",
+          movies: ["Blacklist", "American Psycho"],
+        },
+        {
+          name: " Elizabeth Keen",
+          movies: ["Titanic", "Inception"],
+        },
+      ],
     };
   },
 };
@@ -128,5 +167,9 @@ h1 {
 }
 .new {
   color: olivedrab;
+}
+
+.actor {
+  color: darkblue;
 }
 </style>
