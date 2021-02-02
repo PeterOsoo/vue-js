@@ -42,6 +42,27 @@
   <h2 :style="headerStyleObject">Style Object</h2>
   <div :style="[baseStyleObject, successStyleObject]">Success Style</div>
   <div :style="[baseStyleObject, dangerStyleObject]">Danger Style</div>
+
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <!-- Conditional Rendering -->
+  <h1>Conditional Rendering</h1>
+  <h2 v-if="num === 0">The number is zero</h2>
+  <h2 v-else-if="num < 0">The number is negative</h2>
+  <h2 v-else-if="num > 0">The number is positive</h2>
+  <h2 v-else>Not a number</h2>
+
+  <template v-if="showElement">
+    <h2>Rateng</h2>
+    <h2>Ondiek</h2>
+    <h2>Vue 3</h2>
+  </template>
+
+  <!-- v show is always available in the DOM even if its false  -->
+  <h2 v-show="showElement">Using v-show</h2>
 </template>
 
 <script>
@@ -79,6 +100,8 @@ export default {
         backgroundColor: "red",
         border: "1px solid darkred",
       },
+      num: 0,
+      showElement: false,
     };
   },
 };
