@@ -125,110 +125,112 @@
       {{ JSON.stringify(formValues, null, 2) }}
     </pre>
   </div>
-  <form @submit.prevent="submitForm" class="form-data">
-    <div>
-      <label for="name">Name</label>
-      <input type="text" id="name" v-model.trim.lazy="formValues.name" />
-    </div>
-    <div>
-      <label for="profile">Profile Summary</label>
-      <textarea id="profile" v-model="formValues.profileSummary" />
-    </div>
-    <div>
-      <label for="country">Country</label>
-      <select id="country" v-model="formValues.country">
-        <option value="">Select a country</option>
-        <option value="kenya">Kenya</option>
-        <option value="uganda">Uganda</option>
-        <option value="tanzania">Tanzania</option>
-      </select>
-    </div>
-    <div>
-      <label for="job-location">Job location</label>
-      <select id="job-location" v-model="formValues.jobLocation" multiple>
-        <option value="kenya">Kenya</option>
-        <option value="uganda">Uganda</option>
-        <option value="tanzania">Tanzania</option>
-      </select>
-    </div>
-    <div>
-      <input
-        id="remoteWork"
-        type="checkbox"
-        v-model="formValues.remoteWork"
-        true-value="yes"
-        false-value="no"
-      />
-      <label for="remoteWork">Open to remote work?</label>
-    </div>
-    <div>
-      <label>Skill set</label>
-      <input
-        type="checkbox"
-        id="html"
-        value="html"
-        v-model="formValues.skillSet"
-      />
-      <label for="html">HTML</label>
-      <input
-        type="checkbox"
-        id="css"
-        value="css"
-        v-model="formValues.skillSet"
-      />
-      <label for="css">CSS</label>
-      <input
-        type="checkbox"
-        id="javascript"
-        value="javascript"
-        v-model="formValues.skillSet"
-      />
-      <label for="javascript">JavaScript</label>
-    </div>
-    <div>
-      <label>Years of Experience</label>
-      <input
-        type="radio"
-        id="0-2"
-        value="0-2"
-        v-model="formValues.yearsOfExperience"
-      />
-      <label for="0-2">0-2</label>
-      <input
-        type="radio"
-        id="3-5"
-        value="3-5"
-        v-model="formValues.yearsOfExperience"
-      />
-      <label for="3-5">3-5</label>
-      <input
-        type="radio"
-        id="6-10"
-        value="6-10"
-        v-model="formValues.yearsOfExperience"
-      />
-      <label for="6-10">5-10</label>
-      <input
-        type="radio"
-        id="10+"
-        value="10+"
-        v-model="formValues.yearsOfExperience"
-      />
-      <label for="10+">10+</label>
-    </div>
-    <div>
-      <label for="age">Age</label>
-      <input
-        @keyup.enter="submitForm"
-        type="number"
-        id="age"
-        v-model.number="formValues.age"
-      />
-    </div>
-    <div>
-      <button>Submit</button>
-    </div>
-  </form>
+  <div>
+    <form @submit.prevent="submitForm">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" v-model.trim.lazy="formValues.name" />
+      </div>
+      <div>
+        <label for="profile">Profile Summary</label>
+        <textarea id="profile" v-model="formValues.profileSummary" />
+      </div>
+      <div>
+        <label for="country">Country</label>
+        <select id="country" v-model="formValues.country">
+          <option value="">Select a country</option>
+          <option value="kenya">Kenya</option>
+          <option value="uganda">Uganda</option>
+          <option value="tanzania">Tanzania</option>
+        </select>
+      </div>
+      <div>
+        <label for="job-location">Job location</label>
+        <select id="job-location" v-model="formValues.jobLocation" multiple>
+          <option value="kenya">Kenya</option>
+          <option value="uganda">Uganda</option>
+          <option value="tanzania">Tanzania</option>
+        </select>
+      </div>
+      <div>
+        <input
+          id="remoteWork"
+          type="checkbox"
+          v-model="formValues.remoteWork"
+          true-value="yes"
+          false-value="no"
+        />
+        <label for="remoteWork">Open to remote work?</label>
+      </div>
+      <div>
+        <label>Skill set</label>
+        <input
+          type="checkbox"
+          id="html"
+          value="html"
+          v-model="formValues.skillSet"
+        />
+        <label for="html">HTML</label>
+        <input
+          type="checkbox"
+          id="css"
+          value="css"
+          v-model="formValues.skillSet"
+        />
+        <label for="css">CSS</label>
+        <input
+          type="checkbox"
+          id="javascript"
+          value="javascript"
+          v-model="formValues.skillSet"
+        />
+        <label for="javascript">JavaScript</label>
+      </div>
+      <div>
+        <label>Years of Experience</label>
+        <input
+          type="radio"
+          id="0-2"
+          value="0-2"
+          v-model="formValues.yearsOfExperience"
+        />
+        <label for="0-2">0-2</label>
+        <input
+          type="radio"
+          id="3-5"
+          value="3-5"
+          v-model="formValues.yearsOfExperience"
+        />
+        <label for="3-5">3-5</label>
+        <input
+          type="radio"
+          id="6-10"
+          value="6-10"
+          v-model="formValues.yearsOfExperience"
+        />
+        <label for="6-10">5-10</label>
+        <input
+          type="radio"
+          id="10+"
+          value="10+"
+          v-model="formValues.yearsOfExperience"
+        />
+        <label for="10+">10+</label>
+      </div>
+      <div>
+        <label for="age">Age</label>
+        <input
+          @keyup.enter="submitForm"
+          type="number"
+          id="age"
+          v-model.number="formValues.age"
+        />
+      </div>
+      <div>
+        <button>Submit</button>
+      </div>
+    </form>
+  </div>
 
   <!-- Modifiers  -->
   <h1>Modifiers</h1>
@@ -259,8 +261,13 @@
   <button @click="items.push({ id: 4, title: 'Keyboard', price: 50 })">
     Add item
   </button>
-  <div>
-    <input type="text" v-model="country" class="input-country" />
+  <div class="center">
+    <input
+      type="text"
+      v-model="country"
+      class="input-country"
+      placeholder="Enter country"
+    />
   </div>
 
   <!-- conditional list rendering  -->
@@ -282,9 +289,19 @@
   </div>
 
   <h1>Immediate and Deep Watchers</h1>
-  <input type="text" v-model="movie" />
-  <input type="text" v-model.lazy="movieInfo.title" placeholder="Movie title" />
-  <input type="text" v-model.lazy="movieInfo.actor" placeholder="Movie actor" />
+  <div class="center">
+    <input type="text" v-model="movie" />
+    <input
+      type="text"
+      v-model.lazy="movieInfo.title"
+      placeholder="Movie title"
+    />
+    <input
+      type="text"
+      v-model.lazy="movieInfo.actor"
+      placeholder="Movie actor"
+    />
+  </div>
   <button @click="movieList = movieList.concat(['Blacklist'])">
     Add movie
   </button>
@@ -537,7 +554,18 @@ select {
   border-radius: 4px;
 }
 
-.form-data {
-  text-align: start;
+.center {
+  padding: 0.5rem 35%;
+}
+div.form {
+  display: block;
+  text-align: center;
+}
+
+form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 </style>
