@@ -124,10 +124,10 @@
       {{ JSON.stringify(formValues, null, 2) }}
     </pre>
   </div>
-  <form @submit="submitForm" class="form-data">
+  <form @submit.prevent="submitForm" class="form-data">
     <div>
       <label for="name">Name</label>
-      <input type="text" id="name" v-model.trim="formValues.name" />
+      <input type="text" id="name" v-model.trim.lazy="formValues.name" />
     </div>
     <div>
       <label for="profile">Profile Summary</label>
@@ -217,12 +217,25 @@
     </div>
     <div>
       <label for="age">Age</label>
-      <input type="number" id="age" v-model.number="formValues.age" />
+      <input
+        @keyup.enter="submitForm"
+        type="number"
+        id="age"
+        v-model.number="formValues.age"
+      />
     </div>
     <div>
       <button>Submit</button>
     </div>
   </form>
+
+  <!-- Modifiers  -->
+  <h1>Modifiers</h1>
+  <p>Trim</p>
+  <p>Number</p>
+  <p>Lazy - binds on change event and for form validations</p>
+  <p>Prevent</p>
+  <p>Key</p>
 </template>
 
 <script>
@@ -318,8 +331,7 @@ export default {
       this.name = "Jakablack";
       console.log("Event", event);
     },
-    submitForm(event) {
-      event.preventDefault();
+    submitForm() {
       console.log("form values", this.formValues);
     },
   },
