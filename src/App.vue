@@ -236,6 +236,11 @@
   <p>Lazy - binds on change event and for form validations</p>
   <p>Prevent</p>
   <p>Key</p>
+
+  <!-- Bonus Directives -->
+  <h2 v-once>{{ name }}</h2>
+  <button @click="name = 'Jakablak'">Change name</button>
+  <h2 v-pre>{{ name }}</h2>
 </template>
 
 <script>
