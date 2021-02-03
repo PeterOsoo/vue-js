@@ -2,6 +2,7 @@
   <Greet name="japap" heroName="Super Man" />
   <Greet name="ondiek" heroName="Batman" />
   <Greet name="jaground" heroName="Wonder Man" />
+  <Greet :name="name" :heroName="channel" />
 </template>
 
 <script>
@@ -11,6 +12,12 @@ export default {
   name: "App",
   components: {
     Greet,
+  },
+  data() {
+    return {
+      name: "Ondiegi",
+      channel: "coding addict",
+    };
   },
 };
 </script>
