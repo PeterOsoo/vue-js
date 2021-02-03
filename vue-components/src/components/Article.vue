@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1>Prop Types and Validations</h1>
-    <h2>{{ title }}</h2>
+    <!-- use dollar attribute to bind -->
+    <h2 v-bind="$attrs">{{ title }}</h2>
     <h2>Likes - {{ likes }}</h2>
     <h2>Published - {{ isPublished ? "Yes" : "No" }}</h2>
   </div>
@@ -22,6 +23,8 @@ export default {
       required: true,
     },
   },
+  //   to ignore default behavior of vue
+  inheritAttrs: false,
 };
 </script>
 
