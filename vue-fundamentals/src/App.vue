@@ -1,5 +1,6 @@
 <template>
   <!-- Binding Text -->
+  <h1 class="title">Vue Fundamentals</h1>
   <h1>Binding Text</h1>
   <div>{{ greet }} {{ name }}</div>
   <div v-text="channel"></div>
@@ -506,6 +507,11 @@ export default {
 <style>
 #app {
   text-align: center;
+}
+.title {
+  color: crimson;
+  font-size: 3rem;
+  padding: 1rem 0 2rem 0;
 }
 
 h1 {
