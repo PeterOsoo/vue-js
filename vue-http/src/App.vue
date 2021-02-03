@@ -1,9 +1,10 @@
 <template>
   <h1>Vue HTTP</h1>
-  <PostList />
 
   <h2>HTTP POST Request</h2>
   <CreatePost />
+
+  <PostList />
 </template>
 
 <script>
