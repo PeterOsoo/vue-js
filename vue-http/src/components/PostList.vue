@@ -1,11 +1,11 @@
 <template>
   <div>
     <button @click="getPosts">Load Posts</button>
-  </div>
-  <div v-for="post in posts" :key="post.id">
-    <h3>{{ post.id }}. {{ post.title }}</h3>
-    <p>{{ post.body }}</p>
-    <hr />
+    <div v-for="post in posts" :key="post.id">
+      <h3>{{ post.id }}. {{ post.title }}</h3>
+      <p>{{ post.body }}</p>
+      <hr />
+    </div>
   </div>
   <h3 v-if="errorMsg">{{ errorMsg }}</h3>
 </template>
@@ -24,7 +24,7 @@ export default {
   methods: {
     getPosts() {
       axios
-        .get("https://jsonplaceholder.typicode.com/postsdd")
+        .get("https://jsonplaceholder.typicode.com/posts")
         .then((response) => {
           console.log(response);
           this.posts = response.data;
