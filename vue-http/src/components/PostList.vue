@@ -7,6 +7,7 @@
     <p>{{ post.body }}</p>
     <hr />
   </div>
+  <h3 v-if="errorMsg">{{ errorMsg }}</h3>
 </template>
 
 <script>
@@ -17,18 +18,20 @@ export default {
   data() {
     return {
       posts: [],
+      errorMsg: "",
     };
   },
   methods: {
     getPosts() {
       axios
-        .get("https://jsonplaceholder.typicode.com/posts")
+        .get("https://jsonplaceholder.typicode.com/postsdd")
         .then((response) => {
           console.log(response);
           this.posts = response.data;
         })
         .catch((error) => {
           console.log(error);
+          this.errorMsg = "Error retrieving data";
         });
     },
   },
