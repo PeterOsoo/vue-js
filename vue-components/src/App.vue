@@ -5,7 +5,7 @@
   <Greet name="jaground" heroName="Wonder Man" />
   <Greet :name="name" :heroName="channel" />
 
-  <Article title="New Article by Ondiek" :likes="50" :isPublished="true" />
+  <Article id="title" :likes="50" :isPublished="true" />
 </template>
 
 <script>
