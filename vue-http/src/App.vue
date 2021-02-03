@@ -1,10 +1,15 @@
 <template>
   <h1>Vue HTTP</h1>
+  <PostList />
 </template>
 
 <script>
+import PostList from "./components/PostList.vue";
 export default {
   name: "App",
+  components: {
+    PostList,
+  },
 };
 </script>
 
