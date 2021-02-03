@@ -1,9 +1,10 @@
 <template>
-  <h2>Hello Ondiek</h2>
+  <h2>Hello {{ name }} aka {{ heroName }}</h2>
 </template>
 
 <script>
 export default {
   name: "Greet",
+  props: ["name", "heroName"],
 };
 </script>
