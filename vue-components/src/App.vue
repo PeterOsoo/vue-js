@@ -11,12 +11,18 @@
   <h1>Provide/ Inject</h1>
   <h3>App component {{ name }}</h3>
   <ComponentC />
+
+  <h1>Component Events</h1>
+  <h3>Custom Events</h3>
+  <button @click="showPopup = true">Open popup</button>
+  <Popup v-show="showPopup" />
 </template>
 
 <script>
 import Greet from "./components/Greet.vue";
 import Article from "./components/Article.vue";
 import ComponentC from "./components/ComponentC.vue";
+import Popup from "./components/Popup.vue";
 
 export default {
   name: "App",
@@ -24,11 +30,13 @@ export default {
     Greet,
     Article,
     ComponentC,
+    Popup,
   },
   data() {
     return {
       name: "Jakablak",
       channel: "coding addict",
+      showPopup: false,
     };
   },
   provide() {
