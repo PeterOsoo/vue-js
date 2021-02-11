@@ -1,5 +1,5 @@
 <template>
-  <h2>Component F</h2>
+  <h3>Component F</h3>
   <h3>Component F username - {{ userName }}</h3>
 </template>
 

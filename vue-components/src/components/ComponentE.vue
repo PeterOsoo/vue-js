@@ -1,5 +1,5 @@
 <template>
-  <h2>Component E</h2>
+  <h3>Component E</h3>
   <ComponentF />
 </template>
 
