@@ -5,7 +5,7 @@
   <Greet name="jaground" heroName="Wonder Man" />
   <Greet :name="name" :heroName="channel" />
 
-  <Article id="title" :likes="50" :isPublished="true" />
+  <Article title="New Article" id="title" :likes="50" :isPublished="true" />
 
   <!-- Provide/ Inject -->
   <h1>Provide/ Inject</h1>
