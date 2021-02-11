@@ -1,3 +1,3 @@
 # vue-js
 
-Vue Fundamental Concepts
+Vue Concepts
