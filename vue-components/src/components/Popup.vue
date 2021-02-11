@@ -14,7 +14,15 @@ export default {
       name: "",
     };
   },
-  emits: ["close"],
+  //   emits: ["close"],
+  emits: {
+    close: (name) => {
+      if (!name) {
+        return false;
+      }
+      return true;
+    },
+  },
 };
 </script>
 
