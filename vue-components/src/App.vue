@@ -15,7 +15,7 @@
   <h1>Component Events</h1>
   <h3>Custom Events</h3>
   <button @click="showPopup = true">Open popup</button>
-  <Popup v-show="showPopup" />
+  <Popup v-show="showPopup" @close="showPopup = false" />
 </template>
 
 <script>

@@ -1,13 +1,14 @@
 <template>
   <div>
-    <h3>this is Popup</h3>
-    <button>close popup</button>
+    <h3>this is popup</h3>
+    <button @click="$emit('close')">close popup</button>
   </div>
 </template>
 
 <script>
 export default {
   name: "Popup",
+  emits: ["close"],
 };
 </script>
 
