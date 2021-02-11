@@ -12,10 +12,11 @@
   <h3>App component {{ name }}</h3>
   <ComponentC />
 
+  <!-- Events -->
   <h1>Component Events</h1>
   <h3>Custom Events</h3>
   <button @click="showPopup = true">Open popup</button>
-  <Popup v-show="showPopup" @close="showPopup = false" />
+  <Popup v-show="showPopup" @close="closePopup" />
 </template>
 
 <script>
@@ -38,6 +39,12 @@ export default {
       channel: "coding addict",
       showPopup: false,
     };
+  },
+  methods: {
+    closePopup(name) {
+      this.showPopup = false;
+      console.log("name", name);
+    },
   },
   provide() {
     return {
