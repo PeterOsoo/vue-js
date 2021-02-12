@@ -1,10 +1,11 @@
 <template>
-  <div class="card">Card Content</div>
+  <div class="card">{{ content }}</div>
 </template>
 
 <script>
 export default {
   name: "Card",
+  props: ["content"],
 };
 </script>
 

@@ -20,8 +20,11 @@
   <div class="center">
     <Input v-model="username" />
   </div>
+
+  <!-- Slots -->
   <div class="center">
-    <Card />
+    <Card content="Card Content 1" />
+    <Card content="Card Content 2" />
   </div>
 </template>
 
