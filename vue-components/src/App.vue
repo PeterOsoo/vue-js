@@ -22,12 +22,27 @@
   </div>
 
   <!-- Slots -->
-  <div class="center">
+  <h1>Slots</h1>
+  <!-- <div class="center">
     <Card> </Card>
     <br />
     <Card> Card content </Card>
     <Card> <h2>Card content</h2> </Card>
     <Card> <img src="https://picsum.photos/200" alt="sample" /> </Card>
+  </div> -->
+
+  <div class="center pb">
+    <Card>
+      <template v-slot:header>
+        <h3>Header</h3>
+      </template>
+      <template v-slot:default>
+        <img src="https://picsum.photos/200" />
+      </template>
+      <template v-slot:footer>
+        <button>View Details</button>
+      </template>
+    </Card>
   </div>
 </template>
 
@@ -90,6 +105,6 @@ h1 {
 }
 
 .pb {
-  padding: 0.5rem 0 0.5rem 30rem;
+  padding: 0.9rem 40%;
 }
 </style>

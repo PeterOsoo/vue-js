@@ -1,6 +1,18 @@
 <template>
   <!-- <div class="card">{{ content }}</div> -->
-  <slot> Default Card</slot>
+  <!-- <slot> Default Card</slot> -->
+
+  <div class="card">
+    <div id="card-header">
+      <slot name="header"></slot>
+    </div>
+    <div id="card-content">
+      <slot>Default Content</slot>
+    </div>
+    <div id="card-footer">
+      <slot name="footer"></slot>
+    </div>
+  </div>
 </template>
 
 <script>
