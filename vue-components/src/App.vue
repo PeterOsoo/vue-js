@@ -23,8 +23,9 @@
 
   <!-- Slots -->
   <div class="center">
-    <Card content="Card Content 1" />
-    <Card content="Card Content 2" />
+    <Card>Card content </Card>
+    <Card> <h2>Card content</h2> </Card>
+    <Card> <img src="https://picsum.photos/200" alt="sample" /> </Card>
   </div>
 </template>
 
