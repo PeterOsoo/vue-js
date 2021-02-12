@@ -17,7 +17,7 @@
   <h3>Custom Events</h3>
   <button @click="showPopup = true">Open popup</button>
   <Popup v-show="showPopup" @close="closePopup" />
-  <div class="center">
+  <div class="pb">
     <Input v-model="username" />
   </div>
 
@@ -87,5 +87,9 @@ h1 {
 }
 .center {
   text-align: center;
+}
+
+.pb {
+  padding: 0.5rem 0 0.5rem 30rem;
 }
 </style>
