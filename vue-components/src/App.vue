@@ -17,7 +17,12 @@
   <h3>Custom Events</h3>
   <button @click="showPopup = true">Open popup</button>
   <Popup v-show="showPopup" @close="closePopup" />
-  <Input v-model="username" />
+  <div class="center">
+    <Input v-model="username" />
+  </div>
+  <div class="center">
+    <Card />
+  </div>
 </template>
 
 <script>
@@ -26,6 +31,7 @@ import Article from "./components/Article.vue";
 import ComponentC from "./components/ComponentC.vue";
 import Popup from "./components/Popup.vue";
 import Input from "./components/Input.vue";
+import Card from "./components/Card.vue";
 
 export default {
   name: "App",
@@ -35,6 +41,7 @@ export default {
     ComponentC,
     Popup,
     Input,
+    Card,
   },
   data() {
     return {
@@ -71,5 +78,8 @@ export default {
 h1 {
   color: rgb(75, 21, 21);
   padding: 2rem;
+}
+.center {
+  text-align: center;
 }
 </style>
