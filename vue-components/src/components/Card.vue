@@ -1,6 +1,6 @@
 <template>
   <!-- <div class="card">{{ content }}</div> -->
-  <slot> </slot>
+  <slot> Default Card</slot>
 </template>
 
 <script>

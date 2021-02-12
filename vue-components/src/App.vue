@@ -23,7 +23,9 @@
 
   <!-- Slots -->
   <div class="center">
-    <Card>Card content </Card>
+    <Card> </Card>
+    <br />
+    <Card> Card content </Card>
     <Card> <h2>Card content</h2> </Card>
     <Card> <img src="https://picsum.photos/200" alt="sample" /> </Card>
   </div>
