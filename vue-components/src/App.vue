@@ -74,9 +74,16 @@
   <TabB v-if="activeTab === 'TabB'" />
   <TabC v-if="activeTab === 'TabC'" /> -->
 
+  <!-- Keeping Dynamic Components Alive -->
   <keep-alive>
     <component :is="activeTab"></component>
   </keep-alive>
+
+  <!-- Teleport Component -->
+  <h1>Teleport Component</h1>
+  <teleport to="#portal-root">
+    <Portal />
+  </teleport>
 </template>
 
 <script>
@@ -91,6 +98,7 @@ import ChildStyles from "./components/ChildStyles.vue";
 import TabA from "./components/TabA.vue";
 import TabB from "./components/TabB.vue";
 import TabC from "./components/TabC.vue";
+import Portal from "./components/Portal.vue";
 
 export default {
   name: "App",
@@ -106,6 +114,7 @@ export default {
     TabA,
     TabB,
     TabC,
+    Portal,
   },
   data() {
     return {
