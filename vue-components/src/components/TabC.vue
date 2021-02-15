@@ -1,14 +1,18 @@
 <template>
-  <div>
-    <p>Tab C content</p>
-  </div>
+  <div>Tab C Content</div>
+  <input type="text" v-model="name" />
 </template>
 
 <script>
 export default {
-  name: "Tab C",
+  name: "TabC",
+  data() {
+    return {
+      name: "",
+    };
+  },
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 </style>
