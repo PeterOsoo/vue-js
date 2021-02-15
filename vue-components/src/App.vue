@@ -56,6 +56,18 @@
       {{ slotProps.lastName }}, {{ slotProps.firstName }}
     </template>
   </NameList>
+
+  <!-- Dynamic Components -->
+  <br />
+  <br />
+  <br />
+  <button @click="activeTab = 'TabA'">Tab A</button>
+  <button @click="activeTab = 'TabB'">Tab B</button>
+  <button @click="activeTab = 'TabC'">Tab C</button>
+
+  <TabA v-if="activeTab === 'TabA'" />
+  <TabB v-if="activeTab === 'TabB'" />
+  <TabC v-if="activeTab === 'TabC'" />
 </template>
 
 <script>
@@ -66,6 +78,9 @@ import Popup from "./components/Popup.vue";
 import Input from "./components/Input.vue";
 import Card from "./components/Card.vue";
 import NameList from "./components/NameList.vue";
+import TabA from "./components/TabA.vue";
+import TabB from "./components/TabB.vue";
+import TabC from "./components/TabC.vue";
 
 export default {
   name: "App",
@@ -77,6 +92,9 @@ export default {
     Input,
     Card,
     NameList,
+    TabA,
+    TabB,
+    TabC,
   },
   data() {
     return {
@@ -84,6 +102,7 @@ export default {
       channel: "coding addict",
       showPopup: false,
       username: "",
+      activeTab: "TabA",
     };
   },
   methods: {
