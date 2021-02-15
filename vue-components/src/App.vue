@@ -57,10 +57,13 @@
     </template>
   </NameList>
 
+  <!-- styles  -->
+  <h1>Component Styles</h1>
+  <h4>App component Text</h4>
+  <ChildStyles> </ChildStyles>
+
   <!-- Dynamic Components -->
-  <br />
-  <br />
-  <br />
+  <h1>Dynamic Components</h1>
   <button @click="activeTab = 'TabA'">Tab A</button>
   <button @click="activeTab = 'TabB'">Tab B</button>
   <button @click="activeTab = 'TabC'">Tab C</button>
@@ -82,6 +85,7 @@ import Popup from "./components/Popup.vue";
 import Input from "./components/Input.vue";
 import Card from "./components/Card.vue";
 import NameList from "./components/NameList.vue";
+import ChildStyles from "./components/ChildStyles.vue";
 import TabA from "./components/TabA.vue";
 import TabB from "./components/TabB.vue";
 import TabC from "./components/TabC.vue";
@@ -96,6 +100,7 @@ export default {
     Input,
     Card,
     NameList,
+    ChildStyles,
     TabA,
     TabB,
     TabC,
@@ -123,7 +128,7 @@ export default {
 };
 </script>
 
-<style>
+<style >
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -143,5 +148,8 @@ h1 {
 
 .pb {
   padding: 0.9rem 40%;
+}
+h4 {
+  color: orange;
 }
 </style>
