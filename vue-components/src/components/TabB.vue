@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Tab B</p>
+    <p>Tab B content</p>
   </div>
 </template>
 
