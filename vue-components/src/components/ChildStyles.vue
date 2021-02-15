@@ -1,5 +1,5 @@
 <template>
-  <h4>ChildStyles component Text</h4>
+  <slot></slot>
 </template>
 
 <script>

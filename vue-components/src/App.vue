@@ -60,7 +60,9 @@
   <!-- styles  -->
   <h1>Component Styles</h1>
   <h4>App component Text</h4>
-  <ChildStyles> </ChildStyles>
+  <ChildStyles>
+    <h4>ChildStyles component Text</h4>
+  </ChildStyles>
 
   <!-- Dynamic Components -->
   <h1>Dynamic Components</h1>
