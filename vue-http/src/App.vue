@@ -1,6 +1,9 @@
 <template>
-  <h1>Vue HTTP</h1>
+  <!-- Lifecycle Hooks -->
+  <h1>Lifecycle Hooks</h1>
+  <Parent />
 
+  <!-- <h1>Vue HTTP</h1> -->
   <h2>HTTP POST Request</h2>
   <CreatePost />
 
@@ -10,11 +13,14 @@
 <script>
 import PostList from "./components/PostList.vue";
 import CreatePost from "./components/CreatePost.vue";
+import Parent from "./components/Parent.vue";
+
 export default {
   name: "App",
   components: {
     PostList,
     CreatePost,
+    Parent,
   },
 };
 </script>
