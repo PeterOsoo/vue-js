@@ -3,6 +3,10 @@
   <h1>Lifecycle Hooks</h1>
   <Parent />
 
+  <h1>Reusability with Mixins</h1>
+  <ClickCounter />
+  <HoverCounter />
+
   <h1>Template Refs</h1>
   <TemplateRef />
 
@@ -18,6 +22,8 @@ import PostList from "./components/PostList.vue";
 import CreatePost from "./components/CreatePost.vue";
 import Parent from "./components/Parent.vue";
 import TemplateRef from "./components/TemplateRef.vue";
+import ClickCounter from "./components/ClickCounter.vue";
+import HoverCounter from "./components/HoverCounter.vue";
 
 export default {
   name: "App",
@@ -26,6 +32,8 @@ export default {
     CreatePost,
     Parent,
     TemplateRef,
+    ClickCounter,
+    HoverCounter,
   },
 };
 </script>
