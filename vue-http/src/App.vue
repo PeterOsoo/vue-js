@@ -3,8 +3,11 @@
   <h1>Lifecycle Hooks</h1>
   <Parent />
 
+  <h1>Template Refs</h1>
+  <TemplateRef />
+
   <!-- <h1>Vue HTTP</h1> -->
-  <h2>HTTP POST Request</h2>
+  <h1>HTTP POST Request</h1>
   <CreatePost />
 
   <PostList />
@@ -14,6 +17,7 @@
 import PostList from "./components/PostList.vue";
 import CreatePost from "./components/CreatePost.vue";
 import Parent from "./components/Parent.vue";
+import TemplateRef from "./components/TemplateRef.vue";
 
 export default {
   name: "App",
@@ -21,6 +25,7 @@ export default {
     PostList,
     CreatePost,
     Parent,
+    TemplateRef,
   },
 };
 </script>
@@ -33,5 +38,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+h1 {
+  padding: 1rem 0;
 }
 </style>
