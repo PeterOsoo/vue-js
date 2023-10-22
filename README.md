@@ -1,5 +1,5 @@
 # vue-js
 
-Vue Concepts
+Fundamental Vue Concepts
 
 Vishwas
